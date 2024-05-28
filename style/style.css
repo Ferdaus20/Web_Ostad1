@@ -1,0 +1,357 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* css for header */
+
+/* css for side nav */
+
+/* Css for company name */
+.company {
+    margin: 80px 0 50px 20px;
+}
+
+.company span {
+    color: white;
+    display: block;
+}
+
+/* end of company name */
+
+.sidenav {
+    height: 65%;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fe6347;
+    overflow-x: hidden;
+    padding-top: 20px;
+
+}
+
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    margin-left: 20px;
+    
+}
+
+.sidenav a:hover {
+    color: aqua;
+    cursor: pointer;
+}
+
+.sidenav a:hover:not(.active) {
+    background-color: #fff;
+    color: red;
+    display: inline-block;
+    
+
+}
+
+/* end of side nav */
+
+/* end of header */
+
+
+
+/* css for main */
+
+main {
+    padding: 20px;
+}
+
+/* css for font */
+.font {
+    font: sans-serif;
+    font-size: 40px;
+    color: #fe6347;
+    padding-left: 30px;
+
+}
+
+.color {
+    color: #000;
+}
+
+/* end of font */
+
+
+
+/* css for horizontal-bar all */
+
+
+.horizontal-bar {
+    width: 60px;
+    height: 12px;
+    background-color: #FF5733;
+    border-radius: 10px;
+    margin-left: 30px;
+}
+
+/* end of horizontal-bar all */
+
+/* css for fixed all */
+#Home,
+#Showcase,
+#Services,
+#Designers,
+#Packages,
+#Contact {
+    margin-left: 340px;
+}
+
+/* css for fixed all */
+
+/* Css for Showcase */
+.showase_img {
+    margin-left: 30px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5px;
+    column-gap: 10px;
+}
+
+.showase_img img {
+    width: 500px;
+    height: 100%;
+}
+
+/* end of Showcase */
+
+/* css for Services */
+.services {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 29px;
+    margin: 30px 0px 50px 29px;
+}
+
+.services-p {
+    margin: 20px 0px 25px 0px;
+}
+
+/* end of Services */
+
+/* css for designers */
+.designers {
+    margin-left: 30px;
+}
+
+.designers-p {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.The-best {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.Our-designers {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.designer-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.designer-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px #0000001A;
+    overflow: hidden;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px;
+}
+
+.designer-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.designer-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.designer-info h3 {
+    margin: 10px 0 5px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.designer-info .role {
+    color: #777;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.designer-info p {
+    color: #666;
+    font-size: 1em;
+}
+
+/* end of designers */
+
+
+
+
+/* css for packages */
+.pckages {
+    margin-left: 29px;
+}
+
+.pricing-tables {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.pricing-table {
+    width: 480px;
+    height: 900;
+    border-collapse: collapse;
+    margin: 0 10px;
+    box-shadow: 0 0 10px #0000001A;
+}
+
+.pricing-table th {
+    background-color: #FF5733;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.pricing-table th.Basic {
+    background-color: #616161 !important;
+}
+
+.pricing-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pricing-table .plan-price {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    background-color: #f4f4f4;
+}
+
+.pricing-table .plan-room {
+    font-size: 18px;
+    color: #777;
+    background-color: #f4f4f4;
+}
+
+.pricing-table .negative1,
+.pricing-table .negative2,
+.pricing-table .positive1,
+.pricing-table .positive2 {
+    border: none;
+    font-size: 25px;
+    cursor: cell;
+}
+
+.pricing-table .sign-up1,
+.pricing-table .sign-up2 {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pricing-table .sign-up1:hover,
+.pricing-table .sign-up2:hover {
+    background-color: #ff7043;
+}
+
+.pricing-table .sign-up-msg1,
+.pricing-table .sign-up-msg2 {
+    display: none;
+}
+
+.button-clicked {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+
+/* end of packages */
+
+
+/* Css for contact */
+.contact {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.description {
+    /* text-align: center; */
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.submit-btn:hover {
+    background-color: #e04e2b;
+}
+
+/* end of contact */
+
+
+/* end of main */
