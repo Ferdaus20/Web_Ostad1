@@ -13,15 +13,38 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateValue(selector, increment) {
         const elements = document.querySelectorAll(selector);
         elements.forEach(element => {
-            if (element.classList.contains('price-value')) {
+            if (element.classList.contains('price-value1')) {
                 let value = parseInt(element.textContent.replace('$', ''), 10);
-                element.textContent = `\$${increment ? value + 1 : value - 1}`;
+                if (increment) {
+                    value += 199;
+                    element.textContent = `$${value}`;
+                } else if (value > 199) {
+                    value -= 199;
+                    element.textContent = `$${value}`;
+                }
+            } else if (element.classList.contains('price-value2')) {
+                let value = parseInt(element.textContent.replace('$', ''), 10);
+                if (increment) {
+                    value += 249;
+                    element.textContent = `$${value}`;
+                } else if (value > 249) {
+                    value -= 249;
+                    element.textContent = `$${value}`;
+                }
             } else if (element.classList.contains('room-value1') || element.classList.contains('room-value2')) {
-                let value = parseInt(element.textContent, 10);
-                element.textContent = increment ? value + 1 : value - 1;
+                let roomValue = parseInt(element.textContent, 10);
+                if (increment) {
+                    roomValue += 1;
+                    element.textContent = `${roomValue}`;
+                } else if (roomValue > 1) { // Assuming the minimum room value is 1
+                    roomValue -= 1;
+                    element.textContent = `${roomValue}`;
+                }
             }
         });
     }
+
+
 
     // Function to toggle sign-up messages and button styles
     function toggleSignUpMessage(buttonSelector, msgSelector, clickCount) {
@@ -44,25 +67,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listeners for + and - buttons for Basic plan
     document.querySelector('.positive1').addEventListener('click', () => {
-        updateValue('.price-basic', true);
+        updateValue('.price-basic.price-value1', true);
         updateValue('.room-value1', true);
     });
 
     document.querySelector('.negative1').addEventListener('click', () => {
-        updateValue('.price-basic', false);
+        updateValue('.price-basic.price-value1', false);
         updateValue('.room-value1', false);
     });
 
     // Event listeners for + and - buttons for Pro plan
     document.querySelector('.positive2').addEventListener('click', () => {
-        updateValue('.price-pro', true);
+        updateValue('.price-pro.price-value2', true);
         updateValue('.room-value2', true);
     });
 
     document.querySelector('.negative2').addEventListener('click', () => {
-        updateValue('.price-pro', false);
+        updateValue('.price-pro.price-value2', false);
         updateValue('.room-value2', false);
     });
+
 
     // Toggle sign-up message and button styles for Basic plan
     toggleSignUpMessage('.sign-up1', '.sign-up-msg1', 'signUp1ClickCount');
