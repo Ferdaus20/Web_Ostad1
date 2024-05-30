@@ -24,7 +24,7 @@ body {
 /* end of company name */
 
 .sidenav {
-    height: 65%;
+    height: 100vh;
     width: 300px;
     position: fixed;
     top: 0;
